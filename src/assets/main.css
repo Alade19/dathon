@@ -1,0 +1,59 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway&family=Roboto:wght@500&display=swap');
+
+@layer utilities {
+  .rm-drag {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+  .overflowed {
+    overflow: auto;
+  }
+
+  .overflowed::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    /* border-radius: 50px; */
+    background-color: transparent;
+  }
+
+  .overflowed::-webkit-scrollbar-thumb {
+    /* border-radius: 100px; */
+    background-color: #cccccc8a;
+    /* vertical-align: middle */
+  }
+}
+
+@layer components {
+  .focused {
+    @apply focus:outline-none focus-visible:ring ring-slate-200;
+  }
+  .app-x {
+    @apply xl:px-24 sm:px-10 px-5;
+  }
+  .app-l {
+    @apply xl:pl-24 sm:pl-10 pl-5;
+  }
+  .app-r {
+    @apply xl:pr-24 sm:pr-10 pr-5;
+  }
+  .font {
+    font-family: 'Poppins', sans-serif;
+  }
+  .ed-shadow {
+    @apply shadow-[0px_0px_10px_.5px_#eaeaea] dark:border dark:shadow-none dark:border-gray-700;
+  }
+  .ed-border {
+    @apply border dark:shadow-none dark:border-gray-700;
+  }
+  .app-input {
+    @apply border dark:shadow-none dark:border-gray-700 border-gray-300 bg-transparent p-2 h-10 rounded-md outline-none dark:focus:border-gray-400 transition-all duration-300;
+  }
+  input,
+  select {
+    @apply dark:[color-scheme:dark];
+  }
+}
